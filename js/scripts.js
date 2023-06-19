@@ -44,13 +44,23 @@ while (j < animals.length) {
 
 */
 
-let userAnimal = prompt('Quale animale vuoi cercare?');
-console.log('userAnimal', userAnimal, typeof userAnimal);
+// let userAnimal = prompt('Quale animale vuoi cercare?');
+// console.log('userAnimal', userAnimal, typeof userAnimal);
 
-while (userAnimal.length < 3) {
-    // alert('Conosci animali con nome più corto di 3 caratteri?');
-    userAnimal = prompt('Nome non valido. Quale animale vuoi cercare?');
-}
+// while (userAnimal.length < 3) {
+//     // alert('Conosci animali con nome più corto di 3 caratteri?');
+//     userAnimal = prompt('Nome non valido. Quale animale vuoi cercare?');
+// }
+
+let userAnimal = 'gatto';
+let promptText = 'Quale animale vuoi cercare?';
+
+do {
+    userAnimal = prompt(promptText);
+    promptText = 'Nome non valido. Quale animale vuoi cercare?';
+} while (userAnimal.length < 3);
+
+console.log('userAnimal', userAnimal, typeof userAnimal);
 
 let foundAnimal = false;
 
